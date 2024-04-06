@@ -29,8 +29,7 @@ class JsonConnector(AbstractConnector):
     def get_vacancy(self, count_vacancy):
         """Метод сортировки по количеству №"""
         loaded_vacancies = self.load_file()
-        sorted_vacancies = sorted(loaded_vacancies, key=lambda x: x.get('salary', {}).get('from', 0)
-        if isinstance(x.get('salary', {}), dict) else 0, reverse=True)
+        sorted_vacancies = sorted(loaded_vacancies, key=lambda x: x.get('salary', 0), reverse=True)
         return sorted_vacancies[:count_vacancy]
 
     def del_vacancy(self, vacancy):

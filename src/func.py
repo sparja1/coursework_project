@@ -3,6 +3,7 @@ from src.api import ApiJob
 from src.vacancy import VacancyHH
 import os
 
+
 def main():
     """Функция взаимодествия с пользователем"""
     directory = 'data'
@@ -32,6 +33,6 @@ def main():
         print()
 
 
-
 if __name__ == "__main__":
     main()
+
