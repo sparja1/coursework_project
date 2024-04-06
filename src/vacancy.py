@@ -10,9 +10,10 @@ class VacancyHH:
 
     def __lt__(self, other):
         """Метод стравнения"""
-        if isinstance(self.salary, dict) and isinstance(other.salary, dict):
-            return self.salary.get('from', 0) < other.salary.get('from', 0)
-        return False
+        return self.salary < other.salary
+
+    def __repr__(self):
+        return f"Salary {self.salary}"
 
     def to_dict(self):
         """Метод возвращает словарь который можно добавить"""
